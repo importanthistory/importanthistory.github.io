@@ -11,26 +11,37 @@
       padding: 0;
       background-color: #f5f5f5;
       color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    main {
-      background-color: #fdfdfd;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 600px;
-      text-align: center;
     }
 
     header {
       background-color: #98ddca;
       color: #fff;
-      border-radius: 10px 10px 0 0;
+      text-align: center;
       padding: 1em;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
     }
 
     h1 {
@@ -55,6 +66,11 @@
       border-radius: 5px;
       cursor: pointer;
       margin: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #75baa9;
     }
 
     img {
@@ -75,31 +91,46 @@
 </head>
 <body>
 
-  <main>
-    <header>
-      <h1>The Enlightenment</h1>
-    </header>
+  <header>
+    <h1>The Enlightenment</h1>
+  </header>
 
-    <section>
+  <nav>
+    <a href="#introduction">Introduction</a>
+    <a href="#key-ideas">Key Ideas</a>
+    <a href="#impact">Impact</a>
+    <a href="#images">Images</a>
+  </nav>
+
+  <main>
+    <section id="introduction">
       <h2>Introduction</h2>
       <p>The Enlightenment, or the Age of Reason, was a transformative intellectual and philosophical movement in 17th and 18th-century Europe. It championed reason, science, and individualism.</p>
+    </section>
 
+    <section id="key-ideas">
       <h2>Key Ideas</h2>
       <p>Enlightenment thinkers advocated for human rights, democracy, and the separation of church and state. Notable figures include John Locke, Voltaire, and Jean-Jacques Rousseau.</p>
+    </section>
 
-      <button onclick="showMore('impact')">Show More</button>
-      <p id="impact" style="display: none;">The Enlightenment shaped modern democratic societies, inspiring revolutions and challenging traditional authority.</p>
+    <section id="impact">
+      <h2>Impact</h2>
+      <p>The Enlightenment shaped modern democratic societies, inspiring revolutions and challenging traditional authority.</p>
+      <button onclick="showMore('additional-info')">Show More</button>
+      <p id="additional-info" style="display: none;">The movement had a profound impact on various fields such as science, politics, and literature, laying the groundwork for the development of the modern world.</p>
+    </section>
 
+    <section id="images">
       <h2>Images</h2>
       <img src="IMG_1088.jpeg" alt="Enlightenment Image 1">
       <img src="IMG_1089.jpeg" alt="Enlightenment Image 2">
-
     </section>
 
-    <footer>
-      <p>&copy; 2023 Enlightenment Poster</p>
-    </footer>
   </main>
+
+  <footer>
+    <p>&copy; 2023 Enlightenment Poster</p>
+  </footer>
 
   <script>
     function showMore(id) {
