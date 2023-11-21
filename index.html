@@ -9,7 +9,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #f5f5f5;
       color: #333;
       display: flex;
       justify-content: center;
@@ -18,7 +18,7 @@
     }
 
     main {
-      background-color: #fff;
+      background-color: #fdfdfd;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
       border-radius: 10px;
       padding: 20px;
@@ -27,7 +27,7 @@
     }
 
     header {
-      background-color: #4CAF50;
+      background-color: #98ddca;
       color: #fff;
       border-radius: 10px 10px 0 0;
       padding: 1em;
@@ -39,18 +39,35 @@
     }
 
     h2 {
-      color: #4CAF50;
+      color: #98ddca;
     }
 
     p {
       line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #98ddca;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
     }
 
     footer {
       margin-top: 20px;
       text-align: center;
       padding: 1em;
-      background-color: #4CAF50;
+      background-color: #98ddca;
       color: #fff;
       border-radius: 0 0 10px 10px;
     }
@@ -70,14 +87,26 @@
       <h2>Key Ideas</h2>
       <p>Enlightenment thinkers advocated for human rights, democracy, and the separation of church and state. Notable figures include John Locke, Voltaire, and Jean-Jacques Rousseau.</p>
 
-      <h2>Impact</h2>
-      <p>The Enlightenment shaped modern democratic societies, inspiring revolutions and challenging traditional authority.</p>
+      <button onclick="showMore('impact')">Show More</button>
+      <p id="impact" style="display: none;">The Enlightenment shaped modern democratic societies, inspiring revolutions and challenging traditional authority.</p>
+
+      <h2>Images</h2>
+      <img src="enlightenment1.jpg" alt="Enlightenment Image 1">
+      <img src="enlightenment2.jpg" alt="Enlightenment Image 2">
+
     </section>
 
     <footer>
       <p>&copy; 2023 Enlightenment Poster</p>
     </footer>
   </main>
+
+  <script>
+    function showMore(id) {
+      var element = document.getElementById(id);
+      element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
+    }
+  </script>
 
 </body>
 </html>
